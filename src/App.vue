@@ -1,32 +1,160 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="app">
+        <div id="nav">
+            <router-link :to="{name: 'home'}">Home</router-link>
+            <router-link :to="{name: 'pants'}">Pants</router-link>
+        </div>
+        <main id="main">
+            <router-view/>
+        </main>
     </div>
-    <router-view/>
-  </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+    $primary: #15191D;
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+    * {
+        box-sizing: border-box;
+        font-family: 'Asap', sans-serif;
     }
-  }
-}
+
+    html {
+        background-color: $primary;
+        color: #eee;
+        font-size: 16px;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    h2, h3 {
+        font-weight: 500;
+    }
+
+    $tablePrimary: #2E3034;
+    $tableBorder: #575A5C;
+
+    table {
+        background-color: $tablePrimary;
+        border-collapse: collapse;
+        font-size: 0.875rem;
+        text-shadow: 0 0 0.125rem black;
+        text-align: right;
+    }
+
+    th, td {
+        padding: 0.3875rem 0.5rem 0.375rem;
+        border: 0.0625rem solid $tableBorder;
+
+        &:first-child {
+            text-align: right;
+        }
+    }
+
+    th {
+        font-weight: 500;
+    }
+
+    $awfulInner: #212120;
+    $awfulOuter: #0C0D0D;
+    $awfulBorder: #323232;
+
+    td {
+        border: 0.0625rem solid $awfulBorder;
+    }
+
+    tbody tr {
+        &:hover, &:focus {
+            color: $tablePrimary;
+            background: invert($tablePrimary) !important;
+            text-shadow: none;
+        }
+
+        background: radial-gradient($awfulInner, $awfulOuter);
+
+        td {
+            border-color: $awfulBorder;
+        }
+
+        &.Awful {
+            background: radial-gradient($awfulInner, $awfulOuter);
+
+            td {
+                border-color: $awfulBorder;
+            }
+        }
+
+        $poorInner: #2B2B2B;
+        $poorOuter: #262626;
+        $poorBorder: #3C3C3C;
+
+        &.Poor {
+            background: radial-gradient($poorInner, $poorOuter);
+
+            td {
+                border-color: $poorBorder;
+            }
+        }
+
+        $normalInner: #343434;
+        $normalOuter: #393939;
+        $normalBorder: #676767;
+
+        &.Normal {
+            background: radial-gradient($normalInner, $normalOuter);
+
+            td {
+                border-color: $normalBorder;
+            }
+        }
+
+        $goodInner: #3E3E3D;
+        $goodOuter: #4A4A4A;
+        $goodBorder: #9E9F9F;
+
+        &.Good {
+            background: radial-gradient($goodInner, $goodOuter);
+
+            td {
+                border-color: $goodBorder;
+            }
+        }
+
+        $excellentInner: #474748;
+        $excellentOuter: #585858;
+        $excellentBorder: #D9D9D8;
+
+        &.Excellent {
+            background: radial-gradient($excellentInner, $excellentOuter);
+
+            td {
+                border-color: $excellentBorder;
+            }
+        }
+
+        $masterworkInner: #505047;
+        $masterworkOuter: #67665A;
+        $masterworkBorder: #FFF1AA;
+
+        &.Masterwork {
+            background: radial-gradient($masterworkInner, $masterworkOuter);
+
+            td {
+                border-color: $masterworkBorder;
+            }
+        }
+
+        $legendaryInner: #53523C;
+        $legendaryOuter: #676743;
+        $legendaryBorder: #FED206;
+
+        &.Legendary {
+            background: radial-gradient($legendaryInner, $legendaryOuter);
+
+            td {
+                border-color: $legendaryBorder;
+            }
+        }
+    }
 </style>
