@@ -2,13 +2,27 @@
     <div id="app">
         <div id="nav">
             <router-link :to="{name: 'home'}">Home</router-link>
-            <router-link :to="{name: 'pants'}">Pants</router-link>
+            <router-link v-for="(item, index) in apparel"
+                         :key="index"
+                         :to="{name: 'apparel', params: {type: item.name.toLowerCase()}}">
+                {{ item.name }}
+            </router-link>
         </div>
         <main id="main">
             <router-view/>
         </main>
     </div>
 </template>
+
+<script>
+    export default {
+        data() {
+            return {
+                apparel: this.$store.state.Apparel
+            }
+        }
+    }
+</script>
 
 <style lang="scss">
     $primary: #15191D;
@@ -28,8 +42,28 @@
         padding: 1rem;
     }
 
+    h1, h2, h3 {
+        color: #aaa;
+    }
+
     h2, h3 {
+        margin: 0 0 0.5rem;
         font-weight: 500;
+    }
+
+    h1 {
+        margin: 0 0 1rem;
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        border-bottom: 0.0625rem solid rgba(#aaa, 0.5);
+        padding-bottom: 0.125rem;
+        font-size: 1.25rem;
+    }
+
+    h3 {
+        font-size: 1.125rem;
     }
 
     $tablePrimary: #2E3034;
@@ -41,6 +75,7 @@
         font-size: 0.875rem;
         text-shadow: 0 0 0.125rem black;
         text-align: right;
+        margin: 0 0 2rem;
     }
 
     th, td {

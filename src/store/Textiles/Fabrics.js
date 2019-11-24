@@ -11,7 +11,9 @@ export default [
         armor_sharp: 0.36,
         armor_blunt: 0,
         armor_heat: 0.18,
-        cold_ins: 32.4,
-        heat_ins: 32.4
+        insulation: {
+cold: 32.4,
+heat: 32.4
+}
     },
 ]

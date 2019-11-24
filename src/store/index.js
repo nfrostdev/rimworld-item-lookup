@@ -5,13 +5,16 @@ import Qualities from "./Qualities";
 import Fabrics from "./Textiles/Fabrics";
 import Leathers from "./Textiles/Leathers";
 
+import Apparel from "./Apparel";
+
 Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
         Qualities,
         Fabrics,
-        Leathers
+        Leathers,
+        Apparel
     },
     mutations: {},
     actions: {},

@@ -8,11 +8,15 @@ export default [
         hp: 60,
         value: 3.4,
         mass: 0.03,
-        armor_sharp: 1.12,
-        armor_blunt: 0.24,
-        armor_heat: 1.5,
-        cold_ins: 36,
-        heat_ins: 36
+        armor: {
+            sharp: 1.12,
+            blunt: 0.24,
+            heat: 1.5,
+        },
+        insulation: {
+            cold: 36,
+            heat: 36
+        }
     },
     {
         name: 'Birdskin',
@@ -23,11 +27,15 @@ export default [
         hp: 60,
         value: 1.8,
         mass: 0.03,
-        armor_sharp: 0.67,
-        armor_blunt: 0.14,
-        armor_heat: 1.5,
-        cold_ins: 18,
-        heat_ins: 18
+        armor: {
+            sharp: 0.67,
+            blunt: 0.14,
+            heat: 1.5,
+        },
+        insulation: {
+            cold: 18,
+            heat: 18
+        }
     },
     {
         name: 'Bluefur',
@@ -38,11 +46,15 @@ export default [
         hp: 60,
         value: 2.3,
         mass: 0.03,
-        armor_sharp: 0.81,
-        armor_blunt: 0.24,
-        armor_heat: 1.5,
-        cold_ins: 36,
-        heat_ins: 28.8
+        armor: {
+            sharp: 0.81,
+            blunt: 0.24,
+            heat: 1.5,
+        },
+        insulation: {
+            cold: 36,
+            heat: 28.8
+        }
     },
     {
         name: 'Camelhide',
@@ -53,11 +65,15 @@ export default [
         hp: 60,
         value: 2.3,
         mass: 0.03,
-        armor_sharp: 0.81,
-        armor_blunt: 0.24,
-        armor_heat: 1.5,
-        cold_ins: 28.8,
-        heat_ins: 43.2
+        armor: {
+            sharp: 0.81,
+            blunt: 0.24,
+            heat: 1.5,
+        },
+        insulation: {
+            cold: 28.8,
+            heat: 43.2
+        }
     },
     {
         name: 'Chinchilla Fur',
@@ -68,11 +84,15 @@ export default [
         hp: 60,
         value: 6.5,
         mass: 0.03,
-        armor_sharp: 0.67,
-        armor_blunt: 0.14,
-        armor_heat: 1.5,
-        cold_ins: 54,
-        heat_ins: 28.8
+        armor: {
+            sharp: 0.67,
+            blunt: 0.14,
+            heat: 1.5,
+        },
+        insulation: {
+            cold: 54,
+            heat: 28.8
+        }
     },
     {
         name: 'Dog Leather',
@@ -83,11 +103,15 @@ export default [
         hp: 60,
         value: 2,
         mass: 0.03,
-        armor_sharp: 0.81,
-        armor_blunt: 0.24,
-        armor_heat: 1.5,
-        cold_ins: 25.2,
-        heat_ins: 28.8
+        armor: {
+            sharp: 0.81,
+            blunt: 0.24,
+            heat: 1.5,
+        },
+        insulation: {
+            cold: 25.2,
+            heat: 28.8
+        }
     },
     {
         name: 'Elephant Leather',
@@ -98,11 +122,15 @@ export default [
         hp: 60,
         value: 3,
         mass: 0.03,
-        armor_sharp: 1.12,
-        armor_blunt: 0.24,
-        armor_heat: 1.5,
-        cold_ins: 25.2,
-        heat_ins: 21.6
+        armor: {
+            sharp: 1.12,
+            blunt: 0.24,
+            heat: 1.5,
+        },
+        insulation: {
+            cold: 25.2,
+            heat: 21.6
+        }
     },
     {
         name: 'Foxfur',
@@ -113,11 +141,15 @@ export default [
         hp: 60,
         value: 3.5,
         mass: 0.03,
-        armor_sharp: 0.81,
-        armor_blunt: 0.21,
-        armor_heat: 1.5,
-        cold_ins: 36,
-        heat_ins: 28.8
+        armor: {
+            sharp: 0.81,
+            blunt: 0.21,
+            heat: 1.5,
+        },
+        insulation: {
+            cold: 36,
+            heat: 28.8
+        }
     },
     {
         name: 'Heavy Fur',
@@ -128,11 +160,15 @@ export default [
         hp: 60,
         value: 3.3,
         mass: 0.03,
-        armor_sharp: 1.24,
-        armor_blunt: 0.24,
-        armor_heat: 1.5,
-        cold_ins: 54,
-        heat_ins: 25.2
+        armor: {
+            sharp: 1.24,
+            blunt: 0.24,
+            heat: 1.5,
+        },
+        insulation: {
+            cold: 54,
+            heat: 25.2
+        }
     },
     {
         name: 'Human Leather',
@@ -143,11 +179,15 @@ export default [
         hp: 60,
         value: 4.2,
         mass: 0.03,
-        armor_sharp: 0.64,
-        armor_blunt: 0.24,
-        armor_heat: 1.5,
-        cold_ins: 21.6,
-        heat_ins: 21.6
+        armor: {
+            sharp: 0.64,
+            blunt: 0.24,
+            heat: 1.5,
+        },
+        insulation: {
+            cold: 21.6,
+            heat: 21.6
+        }
     },
     {
         name: 'Lightleather',
@@ -158,11 +198,15 @@ export default [
         hp: 60,
         value: 1.9,
         mass: 0.03,
-        armor_sharp: 0.54,
-        armor_blunt: 0.14,
-        armor_heat: 1.5,
-        cold_ins: 21.6,
-        heat_ins: 21.6
+        armor: {
+            sharp: 0.54,
+            blunt: 0.14,
+            heat: 1.5,
+        },
+        insulation: {
+            cold: 21.6,
+            heat: 21.6
+        }
     },
     {
         name: 'Lizardskin',
@@ -173,11 +217,15 @@ export default [
         hp: 60,
         value: 2.1,
         mass: 0.03,
-        armor_sharp: 0.81,
-        armor_blunt: 0.27,
-        armor_heat: 1.5,
-        cold_ins: 21.6,
-        heat_ins: 21.6
+        armor: {
+            sharp: 0.81,
+            blunt: 0.27,
+            heat: 1.5,
+        },
+        insulation: {
+            cold: 21.6,
+            heat: 21.6
+        }
     },
     {
         name: 'Panthera Fur',
@@ -188,11 +236,15 @@ export default [
         hp: 60,
         value: 3,
         mass: 0.03,
-        armor_sharp: 0.93,
-        armor_blunt: 0.24,
-        armor_heat: 1.5,
-        cold_ins: 28.8,
-        heat_ins: 43.2
+        armor: {
+            sharp: 0.93,
+            blunt: 0.24,
+            heat: 1.5,
+        },
+        insulation: {
+            cold: 28.8,
+            heat: 43.2
+        }
     },
     {
         name: 'Patchleather',
@@ -203,11 +255,15 @@ export default [
         hp: 60,
         value: 1.5,
         mass: 0.03,
-        armor_sharp: 0.45,
-        armor_blunt: 0.19,
-        armor_heat: 0.9,
-        cold_ins: 16.2,
-        heat_ins: 16.2
+        armor: {
+            sharp: 0.45,
+            blunt: 0.19,
+            heat: 0.9,
+        },
+        insulation: {
+            cold: 16.2,
+            heat: 16.2
+        }
     },
     {
         name: 'Pigskin',
@@ -218,11 +274,15 @@ export default [
         hp: 60,
         value: 1.9,
         mass: 0.03,
-        armor_sharp: 0.64,
-        armor_blunt: 0.24,
-        armor_heat: 1.5,
-        cold_ins: 21.6,
-        heat_ins: 21.6
+        armor: {
+            sharp: 0.64,
+            blunt: 0.24,
+            heat: 1.5,
+        },
+        insulation: {
+            cold: 21.6,
+            heat: 21.6
+        }
     },
     {
         name: 'Plainleather',
@@ -233,11 +293,15 @@ export default [
         hp: 60,
         value: 2.1,
         mass: 0.03,
-        armor_sharp: 0.81,
-        armor_blunt: 0.24,
-        armor_heat: 1.5,
-        cold_ins: 28.8,
-        heat_ins: 28.8
+        armor: {
+            sharp: 0.81,
+            blunt: 0.24,
+            heat: 1.5,
+        },
+        insulation: {
+            cold: 28.8,
+            heat: 28.8
+        }
     },
     {
         name: 'Rhinoceros Leather',
@@ -248,11 +312,15 @@ export default [
         hp: 60,
         value: 4.2,
         mass: 0.03,
-        armor_sharp: 1.29,
-        armor_blunt: 0.24,
-        armor_heat: 1.5,
-        cold_ins: 25.2,
-        heat_ins: 25.2
+        armor: {
+            sharp: 1.29,
+            blunt: 0.24,
+            heat: 1.5,
+        },
+        insulation: {
+            cold: 25.2,
+            heat: 25.2
+        }
     },
     {
         name: 'Thrumbofur',
@@ -263,11 +331,15 @@ export default [
         hp: 60,
         value: 14,
         mass: 0.03,
-        armor_sharp: 2.08,
-        armor_blunt: 0.36,
-        armor_heat: 1.5,
-        cold_ins: 61.2,
-        heat_ins: 39.6
+        armor: {
+            sharp: 2.08,
+            blunt: 0.36,
+            heat: 1.5,
+        },
+        insulation: {
+            cold: 61.2,
+            heat: 39.6
+        }
     },
     {
         name: 'Wolfskin',
@@ -278,10 +350,14 @@ export default [
         hp: 60,
         value: 3,
         mass: 0.03,
-        armor_sharp: 1.02,
-        armor_blunt: 0.24,
-        armor_heat: 1.5,
-        cold_ins: 43.2,
-        heat_ins: 28.8
+        armor: {
+            sharp: 1.02,
+            blunt: 0.24,
+            heat: 1.5,
+        },
+        insulation: {
+            cold: 43.2,
+            heat: 28.8
+        }
     }
 ]

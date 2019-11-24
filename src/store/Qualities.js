@@ -1,30 +1,51 @@
 export default [
     {
         name: 'Awful',
-        multiplier: 0.6
+        multipliers: {
+            armor: 0.6,
+            insulation: 0.8
+        }
     },
     {
         name: 'Poor',
-        multiplier: 0.8
+        multipliers: {
+            armor: 0.8,
+            insulation: 0.9
+        },
     },
     {
         name: 'Normal',
-        multiplier: 1
+        multipliers: {
+            armor: 1,
+            insulation: 1
+        },
     },
     {
         name: 'Good',
-        multiplier: 1.15
+        multipliers: {
+            armor: 1.15,
+            insulation: 1.1
+        },
     },
     {
         name: 'Excellent',
-        multiplier: 1.3
+        multipliers: {
+            armor: 1.3,
+            insulation: 1.2
+        },
     },
     {
         name: 'Masterwork',
-        multiplier: 1.45
+        multipliers: {
+            armor: 1.45,
+            insulation: 1.5
+        },
     },
     {
         name: 'Legendary',
-        multiplier: 1.8
+        multipliers: {
+            armor: 1.8,
+            insulation: 1.8
+        },
     },
 ]
