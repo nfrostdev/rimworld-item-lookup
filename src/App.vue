@@ -1,15 +1,15 @@
 <template>
     <div id="app">
-        <div id="nav">
-            <router-link :to="{name: 'home'}">Home</router-link>
-            <router-link v-for="(item, index) in apparel"
-                         :key="index"
-                         :to="{name: 'apparel', params: {type: item.name.toLowerCase()}}">
-                {{ item.name }}
-            </router-link>
-        </div>
+        <header>
+            <nav>
+                <router-link :to="{name: 'home'}">Home</router-link>
+                <router-link :to="{name: 'apparel'}">Apparel</router-link>
+            </nav>
+        </header>
         <main id="main">
-            <router-view/>
+            <transition name="fade" mode="out-in">
+                <router-view/>
+            </transition>
         </main>
     </div>
 </template>
@@ -26,6 +26,8 @@
 
 <style lang="scss">
     $primary: #15191D;
+    $focusPrimary: #2E3034;
+    $focusBorder: #575A5C;
 
     * {
         box-sizing: border-box;
@@ -38,8 +40,27 @@
         font-size: 16px;
     }
 
-    main {
+    main, header {
         padding: 1rem;
+    }
+
+    header {
+        background-color: $focusPrimary;
+        border-bottom: 0.0625rem solid $focusBorder;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    a {
+        color: invert($focusPrimary);
+        text-decoration: none;
+
+        &:hover, &:focus, &.router-link-exact-active {
+            text-decoration: underline;
+        }
     }
 
     h1, h2, h3 {
@@ -66,11 +87,8 @@
         font-size: 1.125rem;
     }
 
-    $tablePrimary: #2E3034;
-    $tableBorder: #575A5C;
-
     table {
-        background-color: $tablePrimary;
+        background-color: $focusPrimary;
         border-collapse: collapse;
         font-size: 0.875rem;
         text-shadow: 0 0 0.125rem black;
@@ -80,7 +98,7 @@
 
     th, td {
         padding: 0.3875rem 0.5rem 0.375rem;
-        border: 0.0625rem solid $tableBorder;
+        border: 0.0625rem solid $focusBorder;
 
         &:first-child {
             text-align: right;
@@ -101,8 +119,8 @@
 
     tbody tr {
         &:hover, &:focus {
-            color: $tablePrimary;
-            background: invert($tablePrimary) !important;
+            color: $focusPrimary;
+            background: invert($focusPrimary) !important;
             text-shadow: none;
         }
 
@@ -191,5 +209,15 @@
                 border-color: $legendaryBorder;
             }
         }
+    }
+
+    // Transitions
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity 0.25s;
+    }
+
+    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
+    {
+        opacity: 0;
     }
 </style>
