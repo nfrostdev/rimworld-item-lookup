@@ -1,19 +1,22 @@
 export default [
     {
         name: 'Cloth',
-        description: 'Cloth woven from organic fibers.',
+        // TODO: This
+        description: 'The strong furry leather of a bear. Compared to most leather, it is quite a bit tougher, and a bit better at all kinds of temperature regulation.',
         beauty: -4,
-        deterioration_rate: 4,
-        flammability: 1.2,
-        hp: 80,
-        value: 1.5,
+        deterioration_rate: 2,
+        flammability: 1,
+        hp: 60,
+        value: 3.4,
         mass: 0.03,
-        armor_sharp: 0.36,
-        armor_blunt: 0,
-        armor_heat: 0.18,
+        armor: {
+            sharp: 1.12,
+            blunt: 0.24,
+            heat: 1.5,
+        },
         insulation: {
-cold: 32.4,
-heat: 32.4
-}
+            cold: 36,
+            heat: 36
+        }
     },
 ]

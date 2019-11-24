@@ -1,11 +1,10 @@
 <template>
     <div class="apparel" v-if="this.item">
         <h1>{{ item.name }}</h1>
+        <p>{{ item.description }}</p>
+        <p class="apparel__layers">Layers: {{ item.layers.join(', ') }}</p>
         <div class="apparel__base">
             <h2>Base Stats</h2>
-            <div class="apparel__layers">
-                {{ item.layers.join(', ') }}
-            </div>
             <table>
                 <thead>
                 <tr>
@@ -48,7 +47,7 @@
                     <tbody>
                     <tr v-for="(quality, q_index) in qualities" :key="q_index" :class="quality.name">
                         <td>{{ quality.name }}</td>
-                        <td>{{ item.hp }}</td>
+                        <td>{{ item.hp * leather.multipliers.hp }}</td>
                         <td>{{ (item.armor.sharp * leather.armor.sharp * 100 * quality.multipliers.armor).toFixed(1) }}%</td>
                         <td>{{ (item.armor.blunt * leather.armor.blunt * 100 * quality.multipliers.armor).toFixed(1) }}%</td>
                         <td>{{ (item.armor.heat * leather.armor.heat * 100 * quality.multipliers.armor).toFixed(1) }}%</td>

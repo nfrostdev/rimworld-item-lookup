@@ -16,7 +16,10 @@ export default [
         insulation: {
             cold: 36,
             heat: 36
-        }
+        },
+        multipliers: {
+            hp: 1.3
+        },
     },
     {
         name: 'Birdskin',
@@ -35,7 +38,10 @@ export default [
         insulation: {
             cold: 18,
             heat: 18
-        }
+        },
+        multipliers: {
+            hp: 1
+        },
     },
     {
         name: 'Bluefur',
@@ -54,7 +60,10 @@ export default [
         insulation: {
             cold: 36,
             heat: 28.8
-        }
+        },
+        multipliers: {
+            hp: 1.3
+        },
     },
     {
         name: 'Camelhide',
@@ -73,7 +82,10 @@ export default [
         insulation: {
             cold: 28.8,
             heat: 43.2
-        }
+        },
+        multipliers: {
+            hp: 1.3
+        },
     },
     {
         name: 'Chinchilla Fur',
@@ -92,7 +104,10 @@ export default [
         insulation: {
             cold: 54,
             heat: 28.8
-        }
+        },
+        multipliers: {
+            hp: 1
+        },
     },
     {
         name: 'Dog Leather',
@@ -111,7 +126,10 @@ export default [
         insulation: {
             cold: 25.2,
             heat: 28.8
-        }
+        },
+        multipliers: {
+            hp: 1.3
+        },
     },
     {
         name: 'Elephant Leather',
@@ -130,7 +148,10 @@ export default [
         insulation: {
             cold: 25.2,
             heat: 21.6
-        }
+        },
+        multipliers: {
+            hp: 1.5
+        },
     },
     {
         name: 'Foxfur',
@@ -149,7 +170,10 @@ export default [
         insulation: {
             cold: 36,
             heat: 28.8
-        }
+        },
+        multipliers: {
+            hp: 1
+        },
     },
     {
         name: 'Heavy Fur',
@@ -168,7 +192,10 @@ export default [
         insulation: {
             cold: 54,
             heat: 25.2
-        }
+        },
+        multipliers: {
+            hp: 1.5
+        },
     },
     {
         name: 'Human Leather',
@@ -187,7 +214,10 @@ export default [
         insulation: {
             cold: 21.6,
             heat: 21.6
-        }
+        },
+        multipliers: {
+            hp: 1.3
+        },
     },
     {
         name: 'Lightleather',
@@ -206,7 +236,10 @@ export default [
         insulation: {
             cold: 21.6,
             heat: 21.6
-        }
+        },
+        multipliers: {
+            hp: 1
+        },
     },
     {
         name: 'Lizardskin',
@@ -225,7 +258,10 @@ export default [
         insulation: {
             cold: 21.6,
             heat: 21.6
-        }
+        },
+        multipliers: {
+            hp: 1
+        },
     },
     {
         name: 'Panthera Fur',
@@ -244,7 +280,10 @@ export default [
         insulation: {
             cold: 28.8,
             heat: 43.2
-        }
+        },
+        multipliers: {
+            hp: 1.3
+        },
     },
     {
         name: 'Patchleather',
@@ -263,7 +302,10 @@ export default [
         insulation: {
             cold: 16.2,
             heat: 16.2
-        }
+        },
+        multipliers: {
+            hp: 1
+        },
     },
     {
         name: 'Pigskin',
@@ -282,7 +324,10 @@ export default [
         insulation: {
             cold: 21.6,
             heat: 21.6
-        }
+        },
+        multipliers: {
+            hp: 1.3
+        },
     },
     {
         name: 'Plainleather',
@@ -301,7 +346,10 @@ export default [
         insulation: {
             cold: 28.8,
             heat: 28.8
-        }
+        },
+        multipliers: {
+            hp: 1.3
+        },
     },
     {
         name: 'Rhinoceros Leather',
@@ -320,7 +368,10 @@ export default [
         insulation: {
             cold: 25.2,
             heat: 25.2
-        }
+        },
+        multipliers: {
+            hp: 1.5
+        },
     },
     {
         name: 'Thrumbofur',
@@ -339,7 +390,10 @@ export default [
         insulation: {
             cold: 61.2,
             heat: 39.6
-        }
+        },
+        multipliers: {
+            hp: 2
+        },
     },
     {
         name: 'Wolfskin',
@@ -358,6 +412,9 @@ export default [
         insulation: {
             cold: 43.2,
             heat: 28.8
-        }
+        },
+        multipliers: {
+            hp: 1.3
+        },
     }
 ]
