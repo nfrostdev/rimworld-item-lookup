@@ -3,24 +3,30 @@
         <header>
             <nav>
                 <router-link :to="{name: 'home'}">Home</router-link>
-                <router-link :to="{name: 'apparel'}">Apparel</router-link>
+                <router-link v-for="(category, index) in Object.keys(this.$store.state)"
+                             :key="index"
+                             :to="{name: 'category', params: {category: category}}">
+                    {{ category }}
+                </router-link>
             </nav>
         </header>
+        <Search/>
         <main id="main">
             <transition name="fade" mode="out-in">
-                <router-view/>
+                <!-- A random key is generated to ensure that the route transition triggers even when a component would be re-used. -->
+                <router-view :key="Math.random()"/>
             </transition>
         </main>
     </div>
 </template>
 
 <script>
+    import Search from "./components/Search";
+
     export default {
-        data() {
-            return {
-                apparel: this.$store.state.Apparel
-            }
-        }
+        components: {
+            Search
+        },
     }
 </script>
 

@@ -28,7 +28,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="apparel__leathers">
+        <div id="leather" class="apparel__leathers">
             <h2>Leather Variants</h2>
             <div v-for="(leather, l_index) in leathers" :key="l_index" class="apparel__leather">
                 <h3>{{ leather.name }} {{ item.name }}</h3>
@@ -71,33 +71,15 @@
 
 <script>
     export default {
+        props: {
+            item: Object
+        },
         data() {
             return {
                 qualities: this.$store.state.Qualities,
                 fabrics: this.$store.state.Fabrics,
                 leathers: this.$store.state.Leathers,
-                item: null
             }
-        },
-        methods: {
-            bindItem(type) {
-                const item = this.$store.state.Apparel.find(object => object.name.toLowerCase() === type);
-                // If this is a valid item, bind it, otherwise "404".
-                if (item) {
-                    this.item = item;
-                } else {
-                    this.$router.push('/not-found')
-                }
-            }
-        },
-        beforeRouteUpdate(to, from, next) {
-            // The item model will need to be updated between routes if this component is re-used.
-            this.bindItem(to.params.type);
-            next();
-        },
-        mounted() {
-            // Check if the item is valid when mounting.
-            this.bindItem(this.$route.params.type);
         }
     }
 </script>

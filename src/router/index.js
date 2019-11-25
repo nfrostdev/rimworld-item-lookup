@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from "../views/Home"
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
     {
@@ -11,19 +11,25 @@ const routes = [
         component: Home
     },
     {
-        path: '/apparel',
-        name: 'apparel',
-        component: () => import('../views/Apparel')
+        path: '/:category',
+        name: 'category',
+        component: () => import('../views/Category')
     },
     {
-        path: '/apparel/:type',
-        name: 'apparel-type',
-        component: () => import('../views/ApparelType')
+        path: '/:category/:type',
+        name: 'item',
+        component: () => import('../views/Item')
+    },
+    {
+        path: '/not-found',
+        name: '404',
+        component: () => import('../views/404')
     }
-]
+];
 
 const router = new VueRouter({
+    mode: 'history',
     routes
-})
+});
 
 export default router
