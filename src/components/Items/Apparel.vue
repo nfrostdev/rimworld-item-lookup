@@ -48,18 +48,18 @@
                     <tr v-for="(quality, q_index) in qualities" :key="q_index" :class="quality.name">
                         <td>{{ quality.name }}</td>
                         <td>{{ item.hp * leather.multipliers.hp }}</td>
-                        <td>{{ (item.armor.sharp * leather.armor.sharp * 100 * quality.multipliers.armor).toFixed(1) }}%</td>
-                        <td>{{ (item.armor.blunt * leather.armor.blunt * 100 * quality.multipliers.armor).toFixed(1) }}%</td>
-                        <td>{{ (item.armor.heat * leather.armor.heat * 100 * quality.multipliers.armor).toFixed(1) }}%</td>
+                        <td>{{ (item.armor.sharp * leather.multipliers.armor.sharp * 100 * quality.multipliers.armor).toFixed(1) }}%</td>
+                        <td>{{ (item.armor.blunt * leather.multipliers.armor.blunt * 100 * quality.multipliers.armor).toFixed(1) }}%</td>
+                        <td>{{ (item.armor.heat * leather.multipliers.armor.heat * 100 * quality.multipliers.armor).toFixed(1) }}%</td>
                         <td>
-                            <span>{{ (leather.insulation.cold * item.insulation.cold * quality.multipliers.insulation).toFixed(1) }}&deg;<sup>F</sup></span>
+                            <span>{{ (leather.multipliers.insulation.cold * item.insulation.cold * quality.multipliers.insulation).toFixed(1) }}&deg;<sup>F</sup></span>
                             <span> / </span>
-                            <span>{{ (((leather.insulation.cold * item.insulation.cold * quality.multipliers.insulation ) - 32) * (5 / 9)).toFixed(1) }}&deg;<sup>C</sup></span>
+                            <span>{{ (((leather.multipliers.insulation.cold * item.insulation.cold * quality.multipliers.insulation ) - 32) * (5 / 9)).toFixed(1) }}&deg;<sup>C</sup></span>
                         </td>
                         <td>
-                            <span>{{ (leather.insulation.heat * item.insulation.heat * quality.multipliers.insulation).toFixed(1) }}&deg;<sup>F</sup></span>
+                            <span>{{ (leather.multipliers.insulation.heat * item.insulation.heat * quality.multipliers.insulation).toFixed(1) }}&deg;<sup>F</sup></span>
                             <span> / </span>
-                            <span>{{ (((leather.insulation.heat * item.insulation.heat * quality.multipliers.insulation) - 32) * (5 / 9)).toFixed(1) }}&deg;<sup>C</sup></span>
+                            <span>{{ (((leather.multipliers.insulation.heat * item.insulation.heat * quality.multipliers.insulation) - 32) * (5 / 9)).toFixed(1) }}&deg;<sup>C</sup></span>
                         </td>
                     </tr>
                     </tbody>

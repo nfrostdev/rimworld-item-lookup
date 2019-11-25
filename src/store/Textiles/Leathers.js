@@ -8,17 +8,17 @@ export default [
         hp: 60,
         value: 3.4,
         mass: 0.03,
-        armor: {
-            sharp: 1.12,
-            blunt: 0.24,
-            heat: 1.5,
-        },
-        insulation: {
-            cold: 36,
-            heat: 36
-        },
         multipliers: {
-            hp: 1.3
+            hp: 1.3,
+            armor: {
+                sharp: 1.12,
+                blunt: 0.24,
+                heat: 1.5,
+            },
+            insulation: {
+                cold: 36,
+                heat: 36
+            },
         },
     },
     {
@@ -30,17 +30,17 @@ export default [
         hp: 60,
         value: 1.8,
         mass: 0.03,
-        armor: {
-            sharp: 0.67,
-            blunt: 0.14,
-            heat: 1.5,
-        },
-        insulation: {
-            cold: 18,
-            heat: 18
-        },
         multipliers: {
-            hp: 1
+            hp: 1,
+            armor: {
+                sharp: 0.67,
+                blunt: 0.14,
+                heat: 1.5,
+            },
+            insulation: {
+                cold: 18,
+                heat: 18
+            },
         },
     },
     {
@@ -52,17 +52,17 @@ export default [
         hp: 60,
         value: 2.3,
         mass: 0.03,
-        armor: {
-            sharp: 0.81,
-            blunt: 0.24,
-            heat: 1.5,
-        },
-        insulation: {
-            cold: 36,
-            heat: 28.8
-        },
         multipliers: {
-            hp: 1.3
+            hp: 1.3,
+            armor: {
+                sharp: 0.81,
+                blunt: 0.24,
+                heat: 1.5,
+            },
+            insulation: {
+                cold: 36,
+                heat: 28.8
+            },
         },
     },
     {
@@ -74,17 +74,17 @@ export default [
         hp: 60,
         value: 2.3,
         mass: 0.03,
-        armor: {
-            sharp: 0.81,
-            blunt: 0.24,
-            heat: 1.5,
-        },
-        insulation: {
-            cold: 28.8,
-            heat: 43.2
-        },
         multipliers: {
-            hp: 1.3
+            hp: 1.3,
+            armor: {
+                sharp: 0.81,
+                blunt: 0.24,
+                heat: 1.5,
+            },
+            insulation: {
+                cold: 28.8,
+                heat: 43.2
+            },
         },
     },
     {
@@ -96,17 +96,17 @@ export default [
         hp: 60,
         value: 6.5,
         mass: 0.03,
-        armor: {
-            sharp: 0.67,
-            blunt: 0.14,
-            heat: 1.5,
-        },
-        insulation: {
-            cold: 54,
-            heat: 28.8
-        },
         multipliers: {
-            hp: 1
+            hp: 1,
+            armor: {
+                sharp: 0.67,
+                blunt: 0.14,
+                heat: 1.5,
+            },
+            insulation: {
+                cold: 54,
+                heat: 28.8
+            },
         },
     },
     {
@@ -118,17 +118,17 @@ export default [
         hp: 60,
         value: 2,
         mass: 0.03,
-        armor: {
-            sharp: 0.81,
-            blunt: 0.24,
-            heat: 1.5,
-        },
-        insulation: {
-            cold: 25.2,
-            heat: 28.8
-        },
         multipliers: {
-            hp: 1.3
+            hp: 1.3,
+            armor: {
+                sharp: 0.81,
+                blunt: 0.24,
+                heat: 1.5,
+            },
+            insulation: {
+                cold: 25.2,
+                heat: 28.8
+            },
         },
     },
     {
@@ -140,17 +140,17 @@ export default [
         hp: 60,
         value: 3,
         mass: 0.03,
-        armor: {
-            sharp: 1.12,
-            blunt: 0.24,
-            heat: 1.5,
-        },
-        insulation: {
-            cold: 25.2,
-            heat: 21.6
-        },
         multipliers: {
-            hp: 1.5
+            hp: 1.5,
+            armor: {
+                sharp: 1.12,
+                blunt: 0.24,
+                heat: 1.5,
+            },
+            insulation: {
+                cold: 25.2,
+                heat: 21.6
+            },
         },
     },
     {
@@ -162,17 +162,17 @@ export default [
         hp: 60,
         value: 3.5,
         mass: 0.03,
-        armor: {
-            sharp: 0.81,
-            blunt: 0.21,
-            heat: 1.5,
-        },
-        insulation: {
-            cold: 36,
-            heat: 28.8
-        },
         multipliers: {
-            hp: 1
+            hp: 1,
+            armor: {
+                sharp: 0.81,
+                blunt: 0.21,
+                heat: 1.5,
+            },
+            insulation: {
+                cold: 36,
+                heat: 28.8
+            },
         },
     },
     {
@@ -184,17 +184,17 @@ export default [
         hp: 60,
         value: 3.3,
         mass: 0.03,
-        armor: {
-            sharp: 1.24,
-            blunt: 0.24,
-            heat: 1.5,
-        },
-        insulation: {
-            cold: 54,
-            heat: 25.2
-        },
         multipliers: {
-            hp: 1.5
+            hp: 1.5,
+            armor: {
+                sharp: 1.24,
+                blunt: 0.24,
+                heat: 1.5,
+            },
+            insulation: {
+                cold: 54,
+                heat: 25.2
+            },
         },
     },
     {
@@ -206,17 +206,17 @@ export default [
         hp: 60,
         value: 4.2,
         mass: 0.03,
-        armor: {
-            sharp: 0.64,
-            blunt: 0.24,
-            heat: 1.5,
-        },
-        insulation: {
-            cold: 21.6,
-            heat: 21.6
-        },
         multipliers: {
-            hp: 1.3
+            hp: 1.3,
+            armor: {
+                sharp: 0.64,
+                blunt: 0.24,
+                heat: 1.5,
+            },
+            insulation: {
+                cold: 21.6,
+                heat: 21.6
+            },
         },
     },
     {
@@ -228,17 +228,17 @@ export default [
         hp: 60,
         value: 1.9,
         mass: 0.03,
-        armor: {
-            sharp: 0.54,
-            blunt: 0.14,
-            heat: 1.5,
-        },
-        insulation: {
-            cold: 21.6,
-            heat: 21.6
-        },
         multipliers: {
-            hp: 1
+            hp: 1,
+            armor: {
+                sharp: 0.54,
+                blunt: 0.14,
+                heat: 1.5,
+            },
+            insulation: {
+                cold: 21.6,
+                heat: 21.6
+            },
         },
     },
     {
@@ -250,17 +250,17 @@ export default [
         hp: 60,
         value: 2.1,
         mass: 0.03,
-        armor: {
-            sharp: 0.81,
-            blunt: 0.27,
-            heat: 1.5,
-        },
-        insulation: {
-            cold: 21.6,
-            heat: 21.6
-        },
         multipliers: {
-            hp: 1
+            hp: 1,
+            armor: {
+                sharp: 0.81,
+                blunt: 0.27,
+                heat: 1.5,
+            },
+            insulation: {
+                cold: 21.6,
+                heat: 21.6
+            },
         },
     },
     {
@@ -272,17 +272,17 @@ export default [
         hp: 60,
         value: 3,
         mass: 0.03,
-        armor: {
-            sharp: 0.93,
-            blunt: 0.24,
-            heat: 1.5,
-        },
-        insulation: {
-            cold: 28.8,
-            heat: 43.2
-        },
         multipliers: {
-            hp: 1.3
+            hp: 1.3,
+            armor: {
+                sharp: 0.93,
+                blunt: 0.24,
+                heat: 1.5,
+            },
+            insulation: {
+                cold: 28.8,
+                heat: 43.2
+            },
         },
     },
     {
@@ -294,17 +294,17 @@ export default [
         hp: 60,
         value: 1.5,
         mass: 0.03,
-        armor: {
-            sharp: 0.45,
-            blunt: 0.19,
-            heat: 0.9,
-        },
-        insulation: {
-            cold: 16.2,
-            heat: 16.2
-        },
         multipliers: {
-            hp: 1
+            hp: 1,
+            armor: {
+                sharp: 0.45,
+                blunt: 0.19,
+                heat: 0.9,
+            },
+            insulation: {
+                cold: 16.2,
+                heat: 16.2
+            },
         },
     },
     {
@@ -316,17 +316,17 @@ export default [
         hp: 60,
         value: 1.9,
         mass: 0.03,
-        armor: {
-            sharp: 0.64,
-            blunt: 0.24,
-            heat: 1.5,
-        },
-        insulation: {
-            cold: 21.6,
-            heat: 21.6
-        },
         multipliers: {
-            hp: 1.3
+            hp: 1.3,
+            armor: {
+                sharp: 0.64,
+                blunt: 0.24,
+                heat: 1.5,
+            },
+            insulation: {
+                cold: 21.6,
+                heat: 21.6
+            },
         },
     },
     {
@@ -338,17 +338,17 @@ export default [
         hp: 60,
         value: 2.1,
         mass: 0.03,
-        armor: {
-            sharp: 0.81,
-            blunt: 0.24,
-            heat: 1.5,
-        },
-        insulation: {
-            cold: 28.8,
-            heat: 28.8
-        },
         multipliers: {
-            hp: 1.3
+            hp: 1.3,
+            armor: {
+                sharp: 0.81,
+                blunt: 0.24,
+                heat: 1.5,
+            },
+            insulation: {
+                cold: 28.8,
+                heat: 28.8
+            },
         },
     },
     {
@@ -360,17 +360,17 @@ export default [
         hp: 60,
         value: 4.2,
         mass: 0.03,
-        armor: {
-            sharp: 1.29,
-            blunt: 0.24,
-            heat: 1.5,
-        },
-        insulation: {
-            cold: 25.2,
-            heat: 25.2
-        },
         multipliers: {
-            hp: 1.5
+            hp: 1.5,
+            armor: {
+                sharp: 1.29,
+                blunt: 0.24,
+                heat: 1.5,
+            },
+            insulation: {
+                cold: 25.2,
+                heat: 25.2
+            },
         },
     },
     {
@@ -382,17 +382,17 @@ export default [
         hp: 60,
         value: 14,
         mass: 0.03,
-        armor: {
-            sharp: 2.08,
-            blunt: 0.36,
-            heat: 1.5,
-        },
-        insulation: {
-            cold: 61.2,
-            heat: 39.6
-        },
         multipliers: {
-            hp: 2
+            hp: 2,
+            armor: {
+                sharp: 2.08,
+                blunt: 0.36,
+                heat: 1.5,
+            },
+            insulation: {
+                cold: 61.2,
+                heat: 39.6
+            },
         },
     },
     {
@@ -404,17 +404,17 @@ export default [
         hp: 60,
         value: 3,
         mass: 0.03,
-        armor: {
-            sharp: 1.02,
-            blunt: 0.24,
-            heat: 1.5,
-        },
-        insulation: {
-            cold: 43.2,
-            heat: 28.8
-        },
         multipliers: {
-            hp: 1.3
+            hp: 1.3,
+            armor: {
+                sharp: 1.02,
+                blunt: 0.24,
+                heat: 1.5,
+            },
+            insulation: {
+                cold: 43.2,
+                heat: 28.8
+            },
         },
     }
 ]

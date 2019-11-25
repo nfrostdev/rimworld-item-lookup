@@ -11,14 +11,17 @@
         </ul>
 
         <Qualities v-if="category === 'Qualities'"/>
+        <Leathers v-if="category === 'Leathers'"/>
     </div>
 </template>
 
 <script>
     import Qualities from "../components/Items/Qualities";
+    import Leathers from "../components/Items/Leathers";
 
     export default {
         components: {
+            Leathers,
             Qualities
         },
         data() {

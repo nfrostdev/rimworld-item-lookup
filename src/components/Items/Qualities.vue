@@ -17,26 +17,31 @@
             }
         },
         methods: {
-            // Format the Qualities data for usage in the table Component.
+            // Format the data for usage in the table component.
             formatQualities() {
                 return Object.keys(this.$store.state.Qualities).map(store => {
                     const object = this.$store.state.Qualities[store];
 
                     return [
                         object.name,
-                        this.toPercent(object.multipliers.beauty),
-                        this.toPercent(object.multipliers.comfort),
-                        this.toPercent(object.multipliers.armor),
-                        this.toPercent(object.multipliers.insulation),
-                        this.toPercent(object.multipliers.melee_damage),
-                        this.toPercent(object.multipliers.ranged_accuracy),
-                        this.toPercent(object.multipliers.value),
-                        this.toPercent(object.multipliers.deterioration_rate),
-                    ];
+                        object.multipliers.beauty,
+                        object.multipliers.comfort,
+                        object.multipliers.armor,
+                        object.multipliers.insulation,
+                        object.multipliers.melee_damage,
+                        object.multipliers.ranged_accuracy,
+                        object.multipliers.value,
+                        object.multipliers.deterioration_rate,
+                    ].map(value => this.toWholePercent(value));
                 });
             },
-            toPercent(value) {
-                return (value * 100).toFixed(0) + '%';
+            toWholePercent(value) {
+                // In order to lazily pass through whatever values I want I'm just going to check the type.
+                // If JavaScript wasn't a horrible language this wouldn't be possible.
+                if (typeof value === 'number') {
+                    return (value * 100).toFixed(0) + '%';
+                }
+                return value;
             }
         },
         mounted() {
