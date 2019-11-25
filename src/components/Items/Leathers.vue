@@ -28,13 +28,13 @@
 
                     return [
                         object.name,
-                        this.toDollarAmount(object.value),
-                        this.toWholePercent(object.multipliers.hp),
-                        this.toWholePercent(object.multipliers.armor.sharp),
-                        this.toWholePercent(object.multipliers.armor.blunt),
-                        this.toWholePercent(object.multipliers.armor.heat),
-                        this.toTemperature(object.multipliers.insulation.cold),
-                        this.toTemperature(object.multipliers.insulation.heat),
+                        this.$options.filters.dollar(object.value),
+                        this.$options.filters.percent(object.multipliers.hp),
+                        this.$options.filters.percent(object.multipliers.armor.sharp),
+                        this.$options.filters.percent(object.multipliers.armor.blunt),
+                        this.$options.filters.percent(object.multipliers.armor.heat),
+                        this.$options.filters.temperature(object.multipliers.insulation.cold),
+                        this.$options.filters.temperature(object.multipliers.insulation.heat),
                     ];
                 });
             },
@@ -46,20 +46,11 @@
                         object.name,
                         object.beauty,
                         object.deterioration_rate + ' / Day',
-                        this.toWholePercent(object.flammability),
+                        this.$options.filters.percent(object.flammability),
                         object.hp,
                         object.mass + ' kg'
                     ];
                 });
-            },
-            toWholePercent(value) {
-                return (value * 100).toFixed(0) + '%';
-            },
-            toDollarAmount(value) {
-                return '$' + value.toFixed(2);
-            },
-            toTemperature(value) {
-                return value.toFixed(1) + '° F / ' + ((value - 32) * (5 / 9)).toFixed(1) + '° C';
             }
         },
         mounted() {
