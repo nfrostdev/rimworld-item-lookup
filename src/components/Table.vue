@@ -2,12 +2,12 @@
     <table>
         <thead>
         <tr>
-            <th v-for="(header, index) in headers" :key="index">{{ header }}</th>
+            <th v-for="header in headers">{{ header }}</th>
         </tr>
         </thead>
         <tbody>
-        <tr v-for="(data, data_index) in content" :key="data_index">
-            <td v-for="(value, value_index) in data" :key="value_index">{{ value }}</td>
+        <tr v-for="data in content">
+            <td v-for="value in data">{{ value }}</td>
         </tr>
         </tbody>
     </table>

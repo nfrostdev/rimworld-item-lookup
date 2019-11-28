@@ -6,8 +6,7 @@
         </form>
         <div v-if="results" class="search__results" @click="resetResults">
             <div v-for="(category, category_name) in results" :key="category_name">
-                <router-link v-for="(result, index) in category"
-                             :key="index"
+                <router-link v-for="result in category"
                              :to="{name: category_name, params: {type: result.name}  }"
                              class="search__result">
                     <span class="search__result__name">{{ result.name }}</span>

@@ -3,7 +3,7 @@
         <h1>{{ category }}</h1>
 
         <ul v-if="category === 'Apparel'">
-            <li v-for="(item, index) in items" :key="index">
+            <li v-for="item in items">
                 <router-link :to="{ name: 'item', params: {category: category, type: item.name}}">
                     {{ item.name }}
                 </router-link>

@@ -3,8 +3,7 @@
         <header>
             <nav>
                 <router-link :to="{name: 'home'}">Home</router-link>
-                <router-link v-for="(category, index) in Object.keys(this.$store.state)"
-                             :key="index"
+                <router-link v-for="category in Object.keys(this.$store.state)"
                              :to="{name: 'category', params: {category: category}}">
                     {{ category }}
                 </router-link>
@@ -14,7 +13,7 @@
         <main id="main">
             <transition name="fade" mode="out-in">
                 <!-- A random key is generated to ensure that the route transition triggers even when a component would be re-used. -->
-                <router-view :key="Math.random()"/>
+                <router-view :key="$route.path"/>
             </transition>
         </main>
     </div>

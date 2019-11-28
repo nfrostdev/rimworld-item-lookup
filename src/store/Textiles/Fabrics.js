@@ -9,7 +9,7 @@ export default [
         value: 2.7,
         mass: 0.03,
         multipliers: {
-            hp: 1.3,
+            hp: 1,
             armor: {
                 sharp: 0.36,
                 blunt: 0,
@@ -32,7 +32,7 @@ export default [
         value: 2.7,
         mass: 0.03,
         multipliers: {
-            hp: 1.3,
+            hp: 1,
             armor: {
                 sharp: 0.36,
                 blunt: 0,
@@ -55,7 +55,7 @@ export default [
         value: 1.5,
         mass: 0.03,
         multipliers: {
-            hp: 1.3,
+            hp: 1,
             armor: {
                 sharp: 0.36,
                 blunt: 0,
@@ -101,7 +101,7 @@ export default [
         value: 9,
         mass: 0.04,
         multipliers: {
-            hp: 1.3,
+            hp: 2.4,
             armor: {
                 sharp: 2,
                 blunt: 0.54,
@@ -124,7 +124,7 @@ export default [
         value: 2.7,
         mass: 0.03,
         multipliers: {
-            hp: 1.3,
+            hp: 1,
             armor: {
                 sharp: 0.8,
                 blunt: 0,
@@ -147,7 +147,7 @@ export default [
         value: 2.7,
         mass: 0.03,
         multipliers: {
-            hp: 1.3,
+            hp: 1,
             armor: {
                 sharp: 0.36,
                 blunt: 0,
