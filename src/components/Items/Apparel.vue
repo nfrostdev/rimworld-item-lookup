@@ -20,19 +20,19 @@
                     <tbody>
                     <tr>
                         <td>{{ item.hp }}</td>
-                        <td>{{ (item.armor.sharp * 100).toFixed(1) }}%</td>
-                        <td>{{ (item.armor.blunt * 100).toFixed(1) }}%</td>
-                        <td>{{ (item.armor.heat * 100).toFixed(1) }}%</td>
-                        <td>{{ (item.insulation.cold * 100).toFixed(1) }}%</td>
-                        <td>{{ (item.insulation.heat * 100).toFixed(1) }}%</td>
+                        <td>{{ item.armor.sharp | precise_percent }}</td>
+                        <td>{{ item.armor.blunt | precise_percent }}</td>
+                        <td>{{ item.armor.heat | precise_percent }}</td>
+                        <td>{{ item.insulation.cold | precise_percent }}</td>
+                        <td>{{ item.insulation.heat | precise_percent }}</td>
                     </tr>
                     </tbody>
                 </table>
             </div>
-            <div id="fabric" class="apparel__fabrics">
-                <h2>Fabric Variants</h2>
-                <div v-for="fabric in fabrics" :id="fabric.name" class="apparel__fabric">
-                    <h3>{{ fabric.name }} {{ item.name }}</h3>
+            <div :id="category" v-for="(material, category) in materials">
+                <h2>{{ category | capitalize }} Variants</h2>
+                <div v-for="type in material" :id="type.name">
+                    <h3>{{ type.name }} {{ item.name }}</h3>
                     <table>
                         <thead>
                         <tr>
@@ -48,57 +48,19 @@
                         <tbody>
                         <tr v-for="quality in qualities" :class="quality.name">
                             <td>{{ quality.name }}</td>
-                            <td>{{ item.hp * fabric.multipliers.hp }}</td>
-                            <td>{{ (item.armor.sharp * fabric.multipliers.armor.sharp * 100 * quality.multipliers.armor).toFixed(1) }}%</td>
-                            <td>{{ (item.armor.blunt * fabric.multipliers.armor.blunt * 100 * quality.multipliers.armor).toFixed(1) }}%</td>
-                            <td>{{ (item.armor.heat * fabric.multipliers.armor.heat * 100 * quality.multipliers.armor).toFixed(1) }}%</td>
+                            <td>{{ item.hp * type.multipliers.hp }}</td>
+                            <td>{{ item.armor.sharp * type.multipliers.armor.sharp * quality.multipliers.armor | precise_percent }}</td>
+                            <td>{{ item.armor.blunt * type.multipliers.armor.blunt * quality.multipliers.armor | precise_percent }}</td>
+                            <td>{{ item.armor.heat * type.multipliers.armor.heat * quality.multipliers.armor | precise_percent }}</td>
                             <td>
-                                <span>{{ (fabric.multipliers.insulation.cold * item.insulation.cold * quality.multipliers.insulation).toFixed(1) }}&deg;<sup>F</sup></span>
+                                <span>{{ (type.multipliers.insulation.cold * item.insulation.cold * quality.multipliers.insulation).toFixed(1) }}&deg;<sup>F</sup></span>
                                 <span> / </span>
-                                <span>{{ (((fabric.multipliers.insulation.cold * item.insulation.cold * quality.multipliers.insulation ) - 32) * (5 / 9)).toFixed(1) }}&deg;<sup>C</sup></span>
+                                <span>{{ (((type.multipliers.insulation.cold * item.insulation.cold * quality.multipliers.insulation ) - 32) * (5 / 9)).toFixed(1) }}&deg;<sup>C</sup></span>
                             </td>
                             <td>
-                                <span>{{ (fabric.multipliers.insulation.heat * item.insulation.heat * quality.multipliers.insulation).toFixed(1) }}&deg;<sup>F</sup></span>
+                                <span>{{ (type.multipliers.insulation.heat * item.insulation.heat * quality.multipliers.insulation).toFixed(1) }}&deg;<sup>F</sup></span>
                                 <span> / </span>
-                                <span>{{ (((fabric.multipliers.insulation.heat * item.insulation.heat * quality.multipliers.insulation) - 32) * (5 / 9)).toFixed(1) }}&deg;<sup>C</sup></span>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div id="leather" class="apparel__leathers">
-                <h2>Leather Variants</h2>
-                <div v-for="leather in leathers" :id="leather.name" class="apparel__leather">
-                    <h3>{{ leather.name }} {{ item.name }}</h3>
-                    <table>
-                        <thead>
-                        <tr>
-                            <th>Quality</th>
-                            <th>HP</th>
-                            <th>Sharp Armor</th>
-                            <th>Blunt Armor</th>
-                            <th>Heat Armor</th>
-                            <th>Cold Insulation</th>
-                            <th>Heat Insulation</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr v-for="quality in qualities" :class="quality.name">
-                            <td>{{ quality.name }}</td>
-                            <td>{{ item.hp * leather.multipliers.hp }}</td>
-                            <td>{{ (item.armor.sharp * leather.multipliers.armor.sharp * 100 * quality.multipliers.armor).toFixed(1) }}%</td>
-                            <td>{{ (item.armor.blunt * leather.multipliers.armor.blunt * 100 * quality.multipliers.armor).toFixed(1) }}%</td>
-                            <td>{{ (item.armor.heat * leather.multipliers.armor.heat * 100 * quality.multipliers.armor).toFixed(1) }}%</td>
-                            <td>
-                                <span>{{ (leather.multipliers.insulation.cold * item.insulation.cold * quality.multipliers.insulation).toFixed(1) }}&deg;<sup>F</sup></span>
-                                <span> / </span>
-                                <span>{{ (((leather.multipliers.insulation.cold * item.insulation.cold * quality.multipliers.insulation ) - 32) * (5 / 9)).toFixed(1) }}&deg;<sup>C</sup></span>
-                            </td>
-                            <td>
-                                <span>{{ (leather.multipliers.insulation.heat * item.insulation.heat * quality.multipliers.insulation).toFixed(1) }}&deg;<sup>F</sup></span>
-                                <span> / </span>
-                                <span>{{ (((leather.multipliers.insulation.heat * item.insulation.heat * quality.multipliers.insulation) - 32) * (5 / 9)).toFixed(1) }}&deg;<sup>C</sup></span>
+                                <span>{{ (((type.multipliers.insulation.heat * item.insulation.heat * quality.multipliers.insulation) - 32) * (5 / 9)).toFixed(1) }}&deg;<sup>C</sup></span>
                             </td>
                         </tr>
                         </tbody>
@@ -108,11 +70,10 @@
         </div>
         <nav aria-label="Apparel Material" class="apparel__navigation">
             <div class="apparel__navigation__heading">Go to Variant</div>
-            <a href="#fabric" class="apparel__navigation__variant">Fabric Variants</a>
-            <a v-for="fabric in fabrics" :href="'#' + fabric.name" class="apparel__navigation__link">{{ fabric.name }}</a>
-
-            <a href="#leather" class="apparel__navigation__variant">Leather Variants</a>
-            <a v-for="leather in leathers" :href="'#' + leather.name" class="apparel__navigation__link">{{ leather.name }}</a>
+            <div class="apparel__navigation__variant" v-for="(material, category) in materials">
+                <a :href="'#' + category" class="apparel__navigation__category">{{ category | capitalize }} Variants</a>
+                <a v-for="type in material" :href="'#' + type.name" class="apparel__navigation__link">{{ type.name }}</a>
+            </div>
         </nav>
     </div>
 </template>
@@ -125,8 +86,14 @@
         data() {
             return {
                 qualities: this.$store.state.Qualities,
-                fabrics: this.$store.state.Fabrics,
-                leathers: this.$store.state.Leathers,
+                materials: null
+            }
+        },
+        mounted() {
+            // Different types of apparel are made from different materials, or have limitations of what material that they can be made of.
+            this.materials = {
+                fabric: this.$store.state.Fabrics,
+                leather: this.$store.state.Leathers,
             }
         }
     }
@@ -139,13 +106,13 @@
     .apparel {
 
         &__content {
-            padding-left: 14rem;
+            padding-left: 15rem;
         }
 
         &__navigation {
             position: fixed;
             top: 8rem;
-            left: 1rem;
+            left: 2rem;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -164,14 +131,21 @@
             }
 
             &__variant {
-                margin: 0.5rem 0 0.25rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+
+            &__category {
+                margin: 1rem 0 0.25rem;
                 font-weight: 500;
                 font-size: 1rem;
                 line-height: 1rem;
             }
 
             &__link {
-                margin-bottom: 0.25rem;
+                margin-top: 0.25rem;
             }
         }
     }
