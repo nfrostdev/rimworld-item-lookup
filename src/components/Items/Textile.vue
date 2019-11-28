@@ -1,5 +1,5 @@
 <template>
-    <div class="leathers">
+    <div class="textile">
         <h2>Multiplier Values</h2>
         <Table :headers="multiplier_headers" :content="multiplier_content"/>
         <h2>Base Values</h2>
@@ -23,8 +23,8 @@
         methods: {
             // Format the data for usage in the table component.
             formatMultipliers() {
-                return Object.keys(this.$store.state.Leathers).map(store => {
-                    const object = this.$store.state.Leathers[store];
+                return Object.keys(this.$store.state[this.$route.params.category]).map(store => {
+                    const object = this.$store.state[this.$route.params.category][store];
 
                     return [
                         object.name,
@@ -39,8 +39,8 @@
                 });
             },
             formatBaseValues() {
-                return Object.keys(this.$store.state.Leathers).map(store => {
-                    const object = this.$store.state.Leathers[store];
+                return Object.keys(this.$store.state[this.$route.params.category]).map(store => {
+                    const object = this.$store.state[this.$route.params.category][store];
 
                     return [
                         object.name,

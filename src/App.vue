@@ -219,11 +219,18 @@
 
     // Transitions
     .fade-enter-active, .fade-leave-active {
-        transition: opacity 0.25s;
+        transition: all 0.125s;
     }
 
-    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
-    {
+    .fade-enter, .fade-leave-to {
         opacity: 0;
+    }
+
+    .fade-enter {
+        transform: translateY(1rem);
+    }
+
+    .fade-leave-to {
+        transform: translateX(1rem);
     }
 </style>
