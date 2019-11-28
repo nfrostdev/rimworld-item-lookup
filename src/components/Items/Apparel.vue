@@ -109,10 +109,10 @@
         <nav aria-label="Apparel Material" class="apparel__navigation">
             <div class="apparel__navigation__heading">Go to Variant</div>
             <a href="#fabric" class="apparel__navigation__variant">Fabric Variants</a>
-            <a v-for="fabric in fabrics" :href="'#' + fabric.name">{{ fabric.name }}</a>
+            <a v-for="fabric in fabrics" :href="'#' + fabric.name" class="apparel__navigation__link">{{ fabric.name }}</a>
 
             <a href="#leather" class="apparel__navigation__variant">Leather Variants</a>
-            <a v-for="leather in leathers" :href="'#' + leather.name">{{ leather.name }}</a>
+            <a v-for="leather in leathers" :href="'#' + leather.name" class="apparel__navigation__link">{{ leather.name }}</a>
         </nav>
     </div>
 </template>
@@ -155,9 +155,11 @@
             border: 0.0625rem solid $focusBorder;
             padding: 0.5rem;
             font-size: 0.875rem;
+            line-height: 0.875rem;
 
             &__heading {
                 font-size: 1.25rem;
+                line-height: 1.25rem;
                 font-weight: 500;
             }
 
@@ -165,6 +167,11 @@
                 margin: 0.5rem 0 0.25rem;
                 font-weight: 500;
                 font-size: 1rem;
+                line-height: 1rem;
+            }
+
+            &__link {
+                margin-bottom: 0.25rem;
             }
         }
     }
