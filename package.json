@@ -3,26 +3,27 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "core-js": "^3.7.0",
-    "register-service-worker": "^1.6.2",
+    "core-js": "^3.12.0",
+    "register-service-worker": "^1.7.2",
     "vue": "^2.6.12",
-    "vue-router": "^3.4.9",
-    "vuex": "^3.5.1"
+    "vue-router": "^3.5.1",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.5.8",
-    "@vue/cli-plugin-pwa": "^4.5.8",
-    "@vue/cli-plugin-router": "^4.5.8",
-    "@vue/cli-plugin-unit-mocha": "^4.5.8",
-    "@vue/cli-plugin-vuex": "^4.5.8",
-    "@vue/cli-service": "^4.5.8",
+    "@vue/cli-plugin-babel": "^4.5.12",
+    "@vue/cli-plugin-pwa": "^4.5.12",
+    "@vue/cli-plugin-router": "^4.5.12",
+    "@vue/cli-plugin-unit-mocha": "^4.5.12",
+    "@vue/cli-plugin-vuex": "^4.5.12",
+    "@vue/cli-service": "^4.5.12",
     "@vue/test-utils": "1.0.0-beta.29",
-    "chai": "^4.1.2",
+    "chai": "^4.3.4",
     "node-sass": "^4.14.1",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.12"
@@ -31,6 +32,9 @@
     "plugins": {
       "autoprefixer": {}
     }
+  },
+  "resolutions": {
+    "ssri": "8.0.1"
   },
   "browserslist": [
     "> 1%",
