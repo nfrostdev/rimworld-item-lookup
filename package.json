@@ -9,10 +9,10 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "core-js": "^3.12.1",
+    "core-js": "^3.15.1",
     "register-service-worker": "^1.7.2",
-    "vue": "^2.6.12",
-    "vue-router": "^3.5.1",
+    "vue": "^2.6.14",
+    "vue-router": "^3.5.2",
     "vuex": "^3.6.2"
   },
   "devDependencies": {
@@ -26,7 +26,7 @@
     "chai": "^4.3.4",
     "node-sass": "^4.14.1",
     "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.12"
+    "vue-template-compiler": "^2.6.14"
   },
   "postcss": {
     "plugins": {
@@ -34,7 +34,8 @@
     }
   },
   "resolutions": {
-    "ssri": "8.0.1"
+    "ssri": "8.0.1",
+    "trim-newlines": ">=3.0.1"
   },
   "browserslist": [
     "> 1%",
